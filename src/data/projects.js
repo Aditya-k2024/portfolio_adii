@@ -1,0 +1,88 @@
+const projects = [
+    {
+        id: 'shieldx',
+        title: 'ShieldX',
+        image: '/ShieldX.png',
+        shortDesc: 'An IoT-based real-time monitoring system featuring a custom-built graphical user interface for live sensor data visualization.',
+        overview: 'ShieldX is an end-to-end IoT monitoring platform designed to bridge the physical and digital worlds. It actively pulls live telemetry from hardware sensors and processes it through a robust Python backend. I developed the dynamic Graphical User Interface (GUI) to visualize this real-time data stream, enabling instant analysis and seamless hardware management without latency.',
+        techStack: ['Python', 'IoT Hardware', 'Custom GUI', 'Real-time Data Streaming', 'C++', 'Hardware-Software Integration'],
+        features: [
+            'Real-time IoT sensor data ingestion and processing',
+            'Custom-built, interactive GUI for live telemetry visualization',
+            'Continuous data streaming with low-latency updates',
+            'Robust hardware-to-software communication bridge',
+            'Dynamic dashboard for monitoring active physical environments'
+        ],
+        learnings: 'Building ShieldX taught me the deep complexities of AIoT integration. I learned how to handle continuous, high-frequency data streams without bottlenecking the system, optimize Python scripts for hardware polling, and design intuitive dashboards that translate raw sensor data into actionable visual metrics.',
+        challenges: 'Managing asynchronous sensor data while keeping the user interface highly responsive was a major hurdle. I had to heavily optimize the data-fetching loops and implement multithreading to ensure the GUI remained completely fluid and did not freeze during rapid telemetry updates from the edge devices.',
+        github: 'https://github.com/Aditya-k2024/ShieldX_complete',
+        link: 'https://drive.google.com/file/d/1iux34A5fZ1wWbQCjcDdKPyeXMbxZ4y_7/view',
+        live: '#',
+        linkedin: 'https://www.linkedin.com/posts/aditya-kumar-107a9532a_python-pyside6-qt-activity-7394430492537815041-p5w3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMZE1cBx9U4YR03u0PQwT6pzJZOjSjdHmM',
+    },
+    {
+        id: 'movie-recommender',
+        title: 'Movie Recommendation System',
+        image: '/movie_recommendation.png',
+        shortDesc: 'A content-based AI recommendation engine utilizing NLP and TF-IDF vectorization to suggest semantically similar films.',
+        overview: 'This project is an end-to-end Machine Learning pipeline that provides highly accurate, content-based movie recommendations. By analyzing thousands of metadata points—including genres, keywords, cast, and plot overviews—the system processes unstructured text using advanced Natural Language Processing (NLP). It converts these text features into mathematical vectors to instantly retrieve and rank the most similar films for the user, all served through a live Streamlit web application.',
+        techStack: ['Python', 'Scikit-learn', 'NLTK', 'Pandas', 'Streamlit', 'Machine Learning', 'NLP'],
+        features: [
+            'Live, interactive web interface built and deployed with Streamlit',
+            'Advanced text preprocessing pipeline including POS-aware lemmatization and tokenization',
+            'Dynamic feature extraction from multiple metadata dimensions (director, cast, genres, plot)',
+            'High-dimensional text vectorization using TF-IDF (unigrams, bigrams, and trigrams)',
+            'Fast and mathematically precise matching engine powered by Cosine Similarity'
+        ],
+        learnings: 'This project solidified my understanding of text-based machine learning pipelines. I learned how critical rigorous data preprocessing—like custom stopword removal and lemmatization—is for the accuracy of a recommendation model. I also gained hands-on experience taking a trained model (`.pkl` files) out of a Jupyter notebook and deploying it into a live, user-facing production environment.',
+        challenges: 'A major challenge was managing the high dimensionality of the text data. Fine-tuning the TF-IDF vectorizer to include bigrams and trigrams without causing memory bottlenecks required careful optimization. Additionally, structuring the pipeline to compute Cosine Similarity across thousands of movie vectors in real-time without lagging the frontend was a valuable lesson in performance engineering.',
+        github: 'https://github.com/Aditya-k2024/Movie_Recommendation_model',
+        link: 'https://movie-recommendation-model-123.streamlit.app/',
+        live: '#',
+        linkedin: 'https://www.linkedin.com/posts/aditya-kumar-107a9532a_machinelearning-python-nlp-activity-7421266952066854912-wKBe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMZE1cBx9U4YR03u0PQwT6pzJZOjSjdHmM',
+    },
+    {
+        id: 'sentiment-ai',
+        title: 'Sentiment AI',
+        image: '/Sentiment-ai.png',
+        shortDesc: 'A real-time NLP application with a custom Matrix-themed UI that performs high-accuracy sentiment analysis on raw text.',
+        overview: 'Sentiment AI is a full-stack Machine Learning web application trained on a dataset of 50,000 IMDB reviews. It utilizes a comprehensive Natural Language Processing (NLP) pipeline to clean, tag, and vectorize unstructured text before classifying its emotional polarity. The Linear Regression classification engine achieves ~88.6% accuracy, serving real-time predictions to a custom, futuristic Matrix-style dashboard featuring dynamic data visualizations.',
+        techStack: ['Python', 'Scikit-Learn', 'NLTK', 'Streamlit', 'Plotly', 'Pandas', 'NLP'],
+        features: [
+            'Real-time sentiment classification (Positive/Negative) of unstructured text',
+            'Custom Matrix-themed user interface utilizing injected HTML/CSS',
+            'Interactive Plotly donut charts that dynamically update based on model confidence',
+            'Advanced NLP preprocessing pipeline featuring HTML cleaning and POS-aware lemmatization',
+            'Highly optimized text vectorization (TF-IDF) and classification via serialized `.pkl` models'
+        ],
+        learnings: 'This project deepened my expertise in architecting end-to-end NLP pipelines. I learned how to effectively implement POS-aware lemmatization to retain the semantic meaning of words, benchmark different classification algorithms (Logistic Regression vs. LinearSVC vs. Naive Bayes), and inject custom CSS into Streamlit to elevate a standard data app into an immersive user experience.',
+        challenges: 'A significant challenge was balancing preprocessing depth with real-time inference speed. Running HTML stripping, POS tagging, and WordNet lemmatization on raw user input can introduce computational latency. I had to highly optimize the text cleaning pipeline to ensure the application could process, vectorize, and classify the text instantly to maintain a fluid user experience.',
+        github: 'https://github.com/Aditya-k2024/Sentiment_ai',
+        link: 'https://sentimentai123.streamlit.app/',
+        live: '#',
+        linkedin: 'https://www.linkedin.com/posts/aditya-kumar-107a9532a_machinelearning-nlp-sentimentanalysis-activity-7420053121881628673-Hr6r?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMZE1cBx9U4YR03u0PQwT6pzJZOjSjdHmM',
+    },
+    {
+        id: 'fake-news-classifier',
+        title: 'AI Fake News Classifier',
+        image: '/fake_news.png',
+        shortDesc: 'A dual-model machine learning pipeline that identifies fabricated news and classifies article subjects using advanced NLP.',
+        overview: 'This end-to-end Machine Learning project tackles digital misinformation using a dual-model architecture. It not only predicts the authenticity of a news article with ~98.7% accuracy but also categorizes its subject matter (e.g., Politics, World News). Built with Python and Scikit-Learn, the system processes raw text through a robust NLP pipeline and serves real-time inferences via an interactive Streamlit web application.',
+        techStack: ['Python', 'Scikit-Learn', 'NLTK', 'Streamlit', 'Pandas', 'TF-IDF', 'Machine Learning'],
+        features: [
+            'Dual-model architecture for simultaneous authenticity prediction and topic classification',
+            'Advanced NLP text processing including Regex filtering and Porter Stemming',
+            'High-accuracy classification achieving ~98.7% on fake news and ~92.5% on subject detection',
+            'Real-time inference engine deployed via a user-friendly Streamlit interface',
+            'Optimized pipeline utilizing serialized vectorizers and label encoders (`.pkl`)'
+        ],
+        learnings: 'This project provided deep insights into handling complex text vectorization and dual-model architectures. I learned how to efficiently serialize multiple components—like TF-IDF vectorizers, label encoders, and distinct classification models—and coordinate them seamlessly within a single, fast inference pipeline for web deployment.',
+        challenges: 'A major challenge was model generalization. Despite achieving ~98.7% accuracy on the training dataset, the model initially struggled with out-of-distribution data like live CNN news reports. This taught me a valuable lesson about dataset bias, overfitting to specific journalistic writing styles, and the critical need for continuous training on diverse, real-world data sources.',
+        github: 'https://github.com/Aditya-k2024/fake-news-detector',
+        link: 'https://fakenewsdetector124.streamlit.app/',
+        live: '#',
+        linkedin: 'https://www.linkedin.com/posts/aditya-kumar-107a9532a_machinelearning-artificialintelligence-fakenewsdetection-activity-7412880036879380482-GnUv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFMZE1cBx9U4YR03u0PQwT6pzJZOjSjdHmM',
+    },
+]
+
+export default projects
